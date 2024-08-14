@@ -1,0 +1,156 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; 
+    
+  }
+  
+ 
+  
+  .slideshow-container {
+    max-width: 600px; 
+    height: 490px;
+    position: relative;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+ 
+  
+  .mySlides {
+    display: none;
+  }
+  
+
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #333; 
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .mySlides img {
+    width: 600px;
+    height: 450px;
+    object-fit: cover;
+  }
+
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(51, 51, 51, 0.8); 
+  }
+  
+  
+  
+  .numbertext {
+    color: #333; 
+    font-size: 14px; 
+    padding: 10px 20px; 
+    position: absolute;
+    top: 20px; 
+  }
+  
+  
+  
+  .dot {
+    cursor: pointer;
+    height: 20px; 
+    width: 20px; 
+    margin: 0 5px; 
+    background-color: #ccc; 
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #333; 
+  }
+  
+  
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+      transform: scale(0.9); 
+    }
+    to {
+      opacity: 1;
+      transform: scale(1); 
+    }
+  }
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: slideDown 0.5s ease-in-out;
+  }
+  
+  .nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-bar li {
+    margin-right: 20px;
+  }
+  
+  .nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .nav-bar a:hover {
+    color: #ccc;
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
